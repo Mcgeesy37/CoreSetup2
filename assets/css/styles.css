@@ -698,3 +698,46 @@ font-size:14px;
 .contact-form textarea{
 resize:vertical;
 }
+
+/* CONTACT FORM LAYOUT */
+
+.contact-form input[type="text"],
+.contact-form input[type="email"]{
+width:100%;
+}
+
+/* Inputs nebeneinander */
+
+.contact-form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:20px;
+}
+
+.contact-form textarea{
+grid-column:1 / -1;
+}
+
+.contact-form button{
+grid-column:1 / -1;
+}
+
+/* MOBILE CONTACT FIX */
+
+@media (max-width:768px){
+
+.contact-box{
+grid-template-columns:1fr;
+}
+
+.contact-form{
+grid-template-columns:1fr;
+}
+
+.promise p{
+font-size:14px;
+line-height:1.4;
+}
+
+}
