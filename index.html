@@ -334,28 +334,45 @@
           </div>
 
           <div class="contact-right">
-            <div class="promise">
-              <strong>A-Z Service</strong>
-              <p>Du bekommst nicht nur eine Website — sondern ein komplettes System: Performance, Sicherheit, Hosting-Optionen, Wartung.</p>
-              <a class="btn primary full"
-              href="mailto:info@coresetup.studio?subject=Website Anfrage"
-              onclick="gtag('event','lead_click',{event_category:'conversion',event_label:'contact_button'});">
-              Kostenlose Website-Analyse
-              </a>
-            </div>
-            <form action="https://formspree.io/f/mwkgrzld" method="POST" class="contact-form">
 
-            <input type="text" name="name" placeholder="Name" required>
+          <div class="promise">
+            <strong>A-Z Service</strong>
+            <p>Du bekommst nicht nur eine Website — sondern ein komplettes System: Performance, Sicherheit, Hosting-Optionen, Wartung.</p>
+          </div>
 
-            <input type="email" name="email" placeholder="Email" required>
+          <form action="https://formspree.io/f/mwkgrzld" method="POST" class="contact-form">
 
-            <textarea name="message" placeholder="Projekt kurz beschreiben" rows="4"></textarea>
+            <input 
+              type="text" 
+              name="name" 
+              placeholder="Name"
+              required
+            >
 
-            <button type="submit" class="btn primary full">
-            Kostenlose Website Analyse
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="Email"
+              required
+            >
+
+            <textarea 
+              name="message" 
+              placeholder="Projekt kurz beschreiben"
+              rows="4"
+            ></textarea>
+
+            <button 
+              type="submit" 
+              class="btn primary full"
+              onclick="gtag('event','lead_form_submit',{event_category:'conversion'});"
+            >
+              Kostenlose Website Analyse
             </button>
 
-           </form>
+          </form>
+
+        </div>
           </div>
         </div>
       </div>
