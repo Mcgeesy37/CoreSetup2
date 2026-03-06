@@ -789,3 +789,38 @@ padding-right:20px;
 }
 
 }
+/* MOBILE TYPOGRAPHY FIX */
+
+@media (max-width:768px){
+
+.section-head{
+grid-template-columns:1fr;
+gap:14px;
+}
+
+.section-head h2{
+font-size:30px;
+line-height:1.15;
+margin-bottom:6px;
+}
+
+.section-head p{
+font-size:15px;
+line-height:1.5;
+max-width:100%;
+}
+
+.wrap{
+padding-left:18px;
+padding-right:18px;
+}
+
+}
+@media (max-width:768px){
+
+.promise p{
+font-size:14px;
+line-height:1.5;
+}
+
+}
