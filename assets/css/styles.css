@@ -741,3 +741,51 @@ line-height:1.4;
 }
 
 }
+/* MOBILE TYPOGRAPHY FIX */
+
+@media (max-width:768px){
+
+h1{
+font-size:32px;
+line-height:1.2;
+}
+
+h2{
+font-size:28px;
+line-height:1.2;
+}
+
+.section-head h2{
+font-size:28px;
+}
+
+.section-head p{
+font-size:14px;
+line-height:1.5;
+max-width:100%;
+}
+
+.section{
+padding-top:60px;
+padding-bottom:60px;
+}
+
+}
+/* MOBILE SECTION GRID */
+
+@media (max-width:768px){
+
+.section-head{
+grid-template-columns:1fr;
+gap:12px;
+}
+
+}
+@media (max-width:768px){
+
+.wrap{
+padding-left:20px;
+padding-right:20px;
+}
+
+}
