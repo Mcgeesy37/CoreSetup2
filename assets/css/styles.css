@@ -833,3 +833,34 @@ margin-top:18px;
 font-size:14px;
 opacity:0.85;
 }
+
+.highlight-section{
+margin-top:120px;
+text-align:center;
+}
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:24px;
+margin-top:40px;
+}
+
+.highlight-card{
+padding:28px;
+
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.08);
+
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+
+border-radius:16px;
+
+transition:all 0.3s ease;
+}
+
+.highlight-card:hover{
+transform:translateY(-4px);
+border:1px solid rgba(255,215,160,0.25);
+}
