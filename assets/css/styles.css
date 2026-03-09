@@ -283,14 +283,20 @@ img{max-width:100%; display:block}
   color:rgba(233,233,234,0.60);
   margin-top:3px;
 }
-
 .trustline{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  margin-top:18px;
-  color:rgba(233,233,234,0.70);
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:20px;
+font-size:14px;
+opacity:0.85;
 }
+
+.trustline span{
+display:flex;
+align-items:center;
+}
+
 .dot{
   width:8px; height:8px;
   border-radius:50%;
@@ -863,4 +869,46 @@ transition:all 0.3s ease;
 .highlight-card:hover{
 transform:translateY(-4px);
 border:1px solid rgba(255,215,160,0.25);
+}
+
+@media (max-width: 768px){
+
+.trustline{
+flex-direction:column;
+gap:8px;
+}
+
+.trustline span{
+font-size:13px;
+}
+
+.hero-badges{
+flex-direction:column;
+gap:10px;
+}
+
+.hero-badges .badge{
+width:fit-content;
+}
+
+}
+@media (max-width:768px){
+
+.hero-copy h1{
+font-size:32px;
+}
+
+.hero-copy h2{
+font-size:18px;
+}
+
+.hero-sub{
+font-size:15px;
+}
+
+.hero-cta{
+flex-direction:column;
+gap:10px;
+}
+
 }
