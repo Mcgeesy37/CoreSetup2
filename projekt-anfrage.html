@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Projekt Anfrage | CoreSetup Studio</title>
+<meta name="description" content="Starte dein Website Projekt in wenigen Sekunden. Schnelle Einschätzung & direkte Umsetzung.">
 
 <!-- Google Tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC13WS43EB"></script>
@@ -18,6 +19,7 @@ gtag('config', 'AW-17994894398');
 </script>
 
 <link rel="stylesheet" href="assets/css/styles.css">
+
 <script defer src="assets/js/fx.js"></script>
 <script defer src="assets/js/main.js"></script>
 
@@ -25,7 +27,7 @@ gtag('config', 'AW-17994894398');
 
 <body>
 
-<!-- BACKGROUND -->
+<!-- BG -->
 <div class="bg-fx">
   <div class="bg-grid"></div>
   <div class="bg-noise"></div>
@@ -39,6 +41,7 @@ gtag('config', 'AW-17994894398');
 <!-- HEADER -->
 <header class="header">
   <div class="nav">
+
     <div class="brand">
       <div class="brand-mark"></div>
       <div class="brand-text">
@@ -52,6 +55,7 @@ gtag('config', 'AW-17994894398');
       <a href="index.html#preise">Preise</a>
       <a href="index.html#kontakt">Kontakt</a>
     </div>
+
   </div>
 </header>
 
@@ -67,7 +71,7 @@ gtag('config', 'AW-17994894398');
       </h1>
 
       <p class="hero-sub">
-        Beantworte ein paar kurze Fragen – wir geben dir eine klare Einschätzung und melden uns direkt bei dir.
+        In wenigen Schritten zu deiner Website. Schnell, klar und ohne Aufwand.
       </p>
     </div>
 
@@ -78,115 +82,155 @@ gtag('config', 'AW-17994894398');
 <section class="section">
   <div class="wrap">
 
-    <form class="price-card">
+    <form class="price-card" id="multiStepForm" action="thanks.html">
 
       <div class="section-head">
         <h2>Projekt Details</h2>
-        <p>Schnell ausfüllen – wir melden uns meist innerhalb von 24h.</p>
+        <p>Kurze Fragen – klare Einschätzung</p>
       </div>
 
-      <!-- GRID -->
-      <div class="form-grid">
+      <!-- STEP 1 -->
+      <div class="step active">
 
-        <div class="input-box">
-          <span>Website Art</span>
-          <input type="text" placeholder="z.B. Unternehmensseite">
+        <div class="form-grid">
+
+          <div class="input-box full">
+            <span>Welche Website brauchst du?</span>
+            <select id="type">
+              <option value="800">Unternehmensseite</option>
+              <option value="600">Landingpage</option>
+              <option value="1200">Online Shop</option>
+            </select>
+          </div>
+
+          <div class="input-box full">
+            <span>Ziel deiner Website</span>
+            <input type="text" placeholder="z.B. mehr Kundenanfragen">
+          </div>
+
         </div>
 
-        <div class="input-box">
-          <span>Branche</span>
-          <input type="text" placeholder="z.B. Elektriker">
+        <button type="button" class="btn primary full next">Weiter</button>
+
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step">
+
+        <div class="form-grid">
+
+          <div class="input-box">
+            <span>Branche</span>
+            <input type="text">
+          </div>
+
+          <div class="input-box">
+            <span>Budget</span>
+            <select id="budget">
+              <option value="0">500–1000€</option>
+              <option value="300">1000–3000€</option>
+              <option value="800">3000€+</option>
+            </select>
+          </div>
+
+          <div class="input-box full">
+            <span>Funktionen</span>
+            <input type="text" placeholder="WhatsApp, Buchung, etc.">
+          </div>
+
         </div>
 
-        <div class="input-box">
-          <span>Bestehende Website</span>
-          <select>
-            <option>Nein</option>
-            <option>Ja</option>
-          </select>
-        </div>
-
-        <div class="input-box">
-          <span>Ziel</span>
-          <input type="text" placeholder="z.B. mehr Kundenanfragen">
-        </div>
-
-        <div class="input-box">
-          <span>Funktionen</span>
-          <input type="text" placeholder="z.B. WhatsApp, Buchung">
-        </div>
-
-        <div class="input-box">
-          <span>Budget</span>
-          <select>
-            <option>500€ – 1000€</option>
-            <option>1000€ – 3000€</option>
-            <option>3000€+</option>
-          </select>
-        </div>
-
-        <div class="input-box">
-          <span>Zeitrahmen</span>
-          <select>
-            <option>Sofort</option>
-            <option>1–2 Wochen</option>
-            <option>1 Monat+</option>
-          </select>
-        </div>
-
-        <div class="input-box">
-          <span>Dein Name</span>
-          <input type="text">
-        </div>
-
-        <div class="input-box full">
-          <span>Email</span>
-          <input type="email">
-        </div>
-
-        <div class="input-box full">
-          <span>Projekt Beschreibung</span>
-          <textarea placeholder="Beschreibe dein Projekt kurz..."></textarea>
+        <div style="display:flex; gap:10px;">
+          <button type="button" class="btn ghost back">Zurück</button>
+          <button type="button" class="btn primary next">Weiter</button>
         </div>
 
       </div>
 
-      <button class="btn primary full">
-        Projekt anfragen
-      </button>
+      <!-- STEP 3 -->
+      <div class="step">
+
+        <h3 style="margin-bottom:10px;">Deine Einschätzung</h3>
+
+        <div class="price-card highlight" style="margin-bottom:20px;">
+          <strong style="font-size:28px;" id="price">800€ – 1200€</strong>
+          <p class="note">Basierend auf deinen Angaben</p>
+        </div>
+
+        <div class="form-grid">
+
+          <div class="input-box">
+            <span>Name</span>
+            <input type="text" required>
+          </div>
+
+          <div class="input-box">
+            <span>Email</span>
+            <input type="email" required>
+          </div>
+
+          <div class="input-box full">
+            <span>Projekt Beschreibung</span>
+            <textarea></textarea>
+          </div>
+
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button type="button" class="btn ghost back">Zurück</button>
+          <button class="btn primary">Projekt anfragen</button>
+        </div>
+
+      </div>
 
     </form>
 
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="section">
-  <div class="wrap grid cards">
+<!-- JS NUR FÜR FORM -->
+<script>
+const steps = document.querySelectorAll(".step");
+let current = 0;
 
-    <div class="card">
-      <h3>Schnelle Umsetzung</h3>
-      <p>Viele Projekte innerhalb weniger Tage online.</p>
-    </div>
+function showStep(i){
+  steps.forEach((s,index)=>{
+    s.classList.toggle("active", index===i);
+  });
+}
 
-    <div class="card">
-      <h3>Klare Preise</h3>
-      <p>Transparente Pakete ohne versteckte Kosten.</p>
-    </div>
+document.querySelectorAll(".next").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    current++;
+    updatePrice();
+    showStep(current);
+  });
+});
 
-  </div>
-</section>
+document.querySelectorAll(".back").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    current--;
+    showStep(current);
+  });
+});
 
-<footer class="footer">
-  <div class="wrap footer-wrap">
-    <span>© 2026 CoreSetup Studio</span>
+function updatePrice(){
+  const type = document.getElementById("type").value;
+  const budget = document.getElementById("budget").value;
 
-    <div class="footer-right">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-    </div>
-  </div>
-</footer>
+  const base = parseInt(type) + parseInt(budget);
+
+  document.getElementById("price").innerText =
+    base + "€ – " + (base + 400) + "€";
+}
+
+showStep(0);
+</script>
+
+<style>
+.step{display:none}
+.step.active{display:block}
+</style>
 
 </body>
 </html>
