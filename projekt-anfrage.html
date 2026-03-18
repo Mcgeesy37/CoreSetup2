@@ -78,54 +78,86 @@ gtag('config', 'AW-17994894398');
 
   <div class="wrap">
 
-    <form class="price-card form-box" action="thanks.html" method="GET">
+    <form class="price-card form-grid" action="thanks.html" method="GET">
 
-      <h2>Projekt Details</h2>
+    <h2>Projekt Details</h2>
 
-      <label>Welche Art Website brauchst du?</label>
-      <input type="text" name="website_typ" placeholder="z.B. Unternehmensseite, Landingpage" required>
+    <div class="form-row">
+      <div>
+        <label>Welche Art Website brauchst du?</label>
+        <input type="text" name="website_typ" placeholder="z.B. Unternehmensseite" required>
+      </div>
 
-      <label>In welcher Branche bist du?</label>
-      <input type="text" name="branche" placeholder="z.B. Elektriker, Restaurant" required>
+      <div>
+        <label>In welcher Branche bist du?</label>
+        <input type="text" name="branche" placeholder="z.B. Elektriker" required>
+      </div>
+    </div>
 
-      <label>Hast du bereits eine Website?</label>
-      <select name="bestehende_website">
-        <option>Nein</option>
-        <option>Ja</option>
-      </select>
+    <div class="form-row">
+      <div>
+        <label>Hast du bereits eine Website?</label>
+        <select name="bestehende_website">
+          <option>Nein</option>
+          <option>Ja</option>
+        </select>
+      </div>
 
-      <label>Was ist dein Ziel?</label>
-      <input type="text" name="ziel" placeholder="z.B. mehr Kundenanfragen">
+      <div>
+        <label>Was ist dein Ziel?</label>
+        <input type="text" name="ziel" placeholder="z.B. mehr Kundenanfragen">
+      </div>
+    </div>
 
-      <label>Welche Funktionen brauchst du?</label>
-      <input type="text" name="funktionen" placeholder="z.B. WhatsApp, Buchungssystem">
+    <div class="form-row">
+      <div>
+        <label>Welche Funktionen brauchst du?</label>
+        <input type="text" name="funktionen" placeholder="z.B. WhatsApp, Buchungssystem">
+      </div>
 
-      <label>Budget</label>
-      <select name="budget">
-        <option>500€ – 1000€</option>
-        <option>1000€ – 3000€</option>
-        <option>3000€+</option>
-      </select>
+      <div>
+        <label>Budget</label>
+        <select name="budget">
+          <option>500€ – 1000€</option>
+          <option>1000€ – 3000€</option>
+          <option>3000€+</option>
+        </select>
+      </div>
+    </div>
 
-      <label>Wann soll die Website fertig sein?</label>
-      <select name="zeitrahmen">
-        <option>Sofort</option>
-        <option>1–2 Wochen</option>
-        <option>1 Monat+</option>
-      </select>
+    <div class="form-row">
+      <div>
+        <label>Wann soll die Website fertig sein?</label>
+        <select name="zeitrahmen">
+          <option>Sofort</option>
+          <option>1–2 Wochen</option>
+          <option>1 Monat+</option>
+        </select>
+      </div>
 
-      <label>Dein Name</label>
-      <input type="text" name="name" required>
+      <div>
+        <label>Dein Name</label>
+        <input type="text" name="name" required>
+      </div>
+    </div>
 
-      <label>Email</label>
-      <input type="email" name="email" required>
+    <div class="form-row">
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
 
+      <div></div>
+    </div>
+
+    <div class="form-full">
       <label>Projekt Beschreibung</label>
       <textarea name="beschreibung" placeholder="Erzähl kurz, was du brauchst..."></textarea>
+    </div>
 
-      <button type="submit" class="btn primary">
-        Projekt anfragen
-      </button>
+    <button type="submit" class="btn primary">
+      Projekt anfragen
+    </button>
 
     </form>
 
