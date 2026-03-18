@@ -8,7 +8,7 @@
 
 <title>Projekt Anfrage | CoreSetup Studio</title>
 
-<meta name="description" content="Starte dein Website Projekt. Beantworte ein paar Fragen und erhalte eine klare Einschätzung für deine neue Website.">
+<meta name="description" content="Starte dein Website Projekt. Beantworte ein paar Fragen und erhalte eine schnelle Einschätzung.">
 
 <!-- Google Tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC13WS43EB"></script>
@@ -21,10 +21,8 @@ gtag('config', 'G-EC13WS43EB');
 gtag('config', 'AW-17994894398');
 </script>
 
-<!-- CSS -->
 <link rel="stylesheet" href="assets/css/styles.css">
 
-<!-- JS -->
 <script defer src="assets/js/fx.js"></script>
 <script defer src="assets/js/main.js"></script>
 
@@ -32,19 +30,37 @@ gtag('config', 'AW-17994894398');
 
 <body>
 
+<!-- BACKGROUND FX -->
+<div class="bg-fx">
+  <div class="bg-grid"></div>
+  <div class="bg-noise"></div>
+  <div class="bg-vignette"></div>
+  <div class="bg-spotlight"></div>
+</div>
+
+<!-- CURSOR GLOW -->
+<div class="cursor-glow"></div>
+
+<!-- SCROLL BAR -->
+<div class="scroll-progress"><span></span></div>
+
 <!-- HEADER -->
 <header class="header">
-  <div class="wrap header-inner">
+  <div class="nav">
 
-    <a href="index.html" class="logo">
-      CoreSetup Studio
-    </a>
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div class="brand-text">
+        <strong>CoreSetup Studio</strong>
+        <small>Webdesign Berlin</small>
+      </div>
+    </div>
 
-    <nav class="nav">
+    <div class="nav-links">
       <a href="index.html#leistungen">Leistungen</a>
       <a href="index.html#preise">Preise</a>
       <a href="index.html#kontakt">Kontakt</a>
-    </nav>
+    </div>
 
   </div>
 </header>
@@ -59,12 +75,14 @@ gtag('config', 'AW-17994894398');
 
       <div class="kicker">PROJEKT STARTEN</div>
 
-      <h1>Dein Website Projekt starten</h1>
+      <h1 class="hero-title">
+        Dein Website Projekt starten
+      </h1>
 
-      <h2>
+      <p class="hero-sub">
         Beantworte ein paar Fragen und erhalte eine schnelle Einschätzung
         für deine neue Website.
-      </h2>
+      </p>
 
     </div>
 
@@ -73,91 +91,89 @@ gtag('config', 'AW-17994894398');
 </section>
 
 
-<!-- FORMULAR -->
+<!-- FORM -->
 <section class="section">
 
   <div class="wrap">
 
     <form class="price-card form-grid" action="thanks.html" method="GET">
 
-    <h2>Projekt Details</h2>
+      <h2>Projekt Details</h2>
 
-    <div class="form-row">
-      <div>
-        <label>Welche Art Website brauchst du?</label>
-        <input type="text" name="website_typ" placeholder="z.B. Unternehmensseite" required>
+      <div class="form-row">
+        <div>
+          <label>Welche Art Website brauchst du?</label>
+          <input type="text" name="website_typ" required>
+        </div>
+
+        <div>
+          <label>In welcher Branche bist du?</label>
+          <input type="text" name="branche" required>
+        </div>
       </div>
 
-      <div>
-        <label>In welcher Branche bist du?</label>
-        <input type="text" name="branche" placeholder="z.B. Elektriker" required>
-      </div>
-    </div>
+      <div class="form-row">
+        <div>
+          <label>Hast du bereits eine Website?</label>
+          <select name="bestehende_website">
+            <option>Nein</option>
+            <option>Ja</option>
+          </select>
+        </div>
 
-    <div class="form-row">
-      <div>
-        <label>Hast du bereits eine Website?</label>
-        <select name="bestehende_website">
-          <option>Nein</option>
-          <option>Ja</option>
-        </select>
-      </div>
-
-      <div>
-        <label>Was ist dein Ziel?</label>
-        <input type="text" name="ziel" placeholder="z.B. mehr Kundenanfragen">
-      </div>
-    </div>
-
-    <div class="form-row">
-      <div>
-        <label>Welche Funktionen brauchst du?</label>
-        <input type="text" name="funktionen" placeholder="z.B. WhatsApp, Buchungssystem">
+        <div>
+          <label>Was ist dein Ziel?</label>
+          <input type="text" name="ziel">
+        </div>
       </div>
 
-      <div>
-        <label>Budget</label>
-        <select name="budget">
-          <option>500€ – 1000€</option>
-          <option>1000€ – 3000€</option>
-          <option>3000€+</option>
-        </select>
-      </div>
-    </div>
+      <div class="form-row">
+        <div>
+          <label>Welche Funktionen brauchst du?</label>
+          <input type="text" name="funktionen">
+        </div>
 
-    <div class="form-row">
-      <div>
-        <label>Wann soll die Website fertig sein?</label>
-        <select name="zeitrahmen">
-          <option>Sofort</option>
-          <option>1–2 Wochen</option>
-          <option>1 Monat+</option>
-        </select>
+        <div>
+          <label>Budget</label>
+          <select name="budget">
+            <option>500€ – 1000€</option>
+            <option>1000€ – 3000€</option>
+            <option>3000€+</option>
+          </select>
+        </div>
       </div>
 
-      <div>
-        <label>Dein Name</label>
-        <input type="text" name="name" required>
+      <div class="form-row">
+        <div>
+          <label>Wann soll die Website fertig sein?</label>
+          <select name="zeitrahmen">
+            <option>Sofort</option>
+            <option>1–2 Wochen</option>
+            <option>1 Monat+</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Dein Name</label>
+          <input type="text" name="name" required>
+        </div>
       </div>
-    </div>
 
-    <div class="form-row">
-      <div>
-        <label>Email</label>
-        <input type="email" name="email" required>
+      <div class="form-row">
+        <div>
+          <label>Email</label>
+          <input type="email" name="email" required>
+        </div>
       </div>
 
-      <div></div>
-    </div>
+      <div class="form-full">
+        <label>Projekt Beschreibung</label>
+        <textarea name="beschreibung"></textarea>
+      </div>
 
-    <div class="form-full">
-      <label>Projekt Beschreibung</label>
-      <textarea name="beschreibung" placeholder="Erzähl kurz, was du brauchst..."></textarea>
-    </div>
-
-    <button type="submit" class="btn primary">
-      Projekt anfragen
-    </button>
+      <button type="submit" class="btn primary full">
+        Projekt anfragen
+      </button>
 
     </form>
 
@@ -169,25 +185,16 @@ gtag('config', 'AW-17994894398');
 <!-- TRUST -->
 <section class="section">
 
-  <div class="wrap">
+  <div class="wrap grid cards">
 
-    <div class="grid-3">
+    <div class="card">
+      <h3>Schnelle Umsetzung</h3>
+      <p>Websites oft innerhalb weniger Tage fertig.</p>
+    </div>
 
-      <div class="price-card">
-        <h3>Schnelle Umsetzung</h3>
-        <p>Websites oft innerhalb weniger Tage fertig.</p>
-      </div>
-
-      <div class="price-card">
-        <h3>Klare Preise</h3>
-        <p>Transparente Pakete ohne versteckte Kosten.</p>
-      </div>
-
-      <div class="price-card">
-        <h3>SEO Fokus</h3>
-        <p>Optimiert für Google & lokale Sichtbarkeit.</p>
-      </div>
-
+    <div class="card">
+      <h3>Klare Preise</h3>
+      <p>Transparente Pakete ohne versteckte Kosten.</p>
     </div>
 
   </div>
@@ -197,18 +204,16 @@ gtag('config', 'AW-17994894398');
 
 <!-- FOOTER -->
 <footer class="footer">
+  <div class="wrap footer-wrap">
 
-  <div class="wrap footer-inner">
+    <span>© 2026 CoreSetup Studio</span>
 
-    <p>© 2026 CoreSetup Studio</p>
-
-    <div class="footer-links">
+    <div class="footer-right">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
 
   </div>
-
 </footer>
 
 </body>
