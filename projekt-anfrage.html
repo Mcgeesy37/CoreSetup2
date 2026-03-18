@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Projekt Anfrage | CoreSetup Studio</title>
-<meta name="description" content="Starte dein Website Projekt – schnell, einfach und professionell.">
 
 <!-- Google Tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC13WS43EB"></script>
@@ -19,9 +18,9 @@ gtag('config', 'AW-17994894398');
 </script>
 
 <link rel="stylesheet" href="assets/css/styles.css">
-
 <script defer src="assets/js/fx.js"></script>
 <script defer src="assets/js/main.js"></script>
+
 </head>
 
 <body>
@@ -34,16 +33,12 @@ gtag('config', 'AW-17994894398');
   <div class="bg-spotlight"></div>
 </div>
 
-<!-- GLOBAL GLOW -->
 <div class="cursor-glow"></div>
-
-<!-- SCROLL -->
 <div class="scroll-progress"><span></span></div>
 
 <!-- HEADER -->
 <header class="header">
   <div class="nav">
-
     <div class="brand">
       <div class="brand-mark"></div>
       <div class="brand-text">
@@ -57,27 +52,22 @@ gtag('config', 'AW-17994894398');
       <a href="index.html#preise">Preise</a>
       <a href="index.html#kontakt">Kontakt</a>
     </div>
-
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero section">
-
-  <!-- EXTRA GLOW NUR HERO -->
-  <div class="cursor-glow"></div>
-
   <div class="wrap hero-wrap">
 
-    <div class="hero-copy">
+    <div>
       <div class="kicker">PROJEKT STARTEN</div>
 
       <h1 class="hero-title">
-        Dein Website Projekt starten
+        Lass uns dein Projekt starten
       </h1>
 
       <p class="hero-sub">
-        Beantworte ein paar Fragen und erhalte eine schnelle Einschätzung für deine neue Website.
+        Beantworte ein paar kurze Fragen – wir geben dir eine klare Einschätzung und melden uns direkt bei dir.
       </p>
     </div>
 
@@ -86,73 +76,92 @@ gtag('config', 'AW-17994894398');
 
 <!-- FORM -->
 <section class="section">
-
   <div class="wrap">
 
-    <!-- FORM WRAPPER MIT EXTRA GLOW -->
-    <div class="form-wrapper">
+    <form class="price-card">
 
-      <div class="cursor-glow"></div>
-
-      <form class="price-card" action="thanks.html" method="GET">
-
+      <div class="section-head">
         <h2>Projekt Details</h2>
+        <p>Schnell ausfüllen – wir melden uns meist innerhalb von 24h.</p>
+      </div>
 
-        <div class="form-row">
-          <input type="text" name="website" placeholder="Welche Art Website brauchst du?" required>
-          <input type="text" name="branche" placeholder="Branche (z.B. Elektriker)" required>
+      <!-- GRID -->
+      <div class="form-grid">
+
+        <div class="input-box">
+          <span>Website Art</span>
+          <input type="text" placeholder="z.B. Unternehmensseite">
         </div>
 
-        <div class="form-row">
-          <select name="bestehende">
-            <option>Hast du bereits eine Website? – Nein</option>
+        <div class="input-box">
+          <span>Branche</span>
+          <input type="text" placeholder="z.B. Elektriker">
+        </div>
+
+        <div class="input-box">
+          <span>Bestehende Website</span>
+          <select>
+            <option>Nein</option>
             <option>Ja</option>
           </select>
-
-          <input type="text" name="ziel" placeholder="Was ist dein Ziel?">
         </div>
 
-        <div class="form-row">
-          <input type="text" name="funktionen" placeholder="z.B. WhatsApp, Buchungssystem">
-          
-          <select name="budget">
-            <option>Budget 500€ – 1000€</option>
+        <div class="input-box">
+          <span>Ziel</span>
+          <input type="text" placeholder="z.B. mehr Kundenanfragen">
+        </div>
+
+        <div class="input-box">
+          <span>Funktionen</span>
+          <input type="text" placeholder="z.B. WhatsApp, Buchung">
+        </div>
+
+        <div class="input-box">
+          <span>Budget</span>
+          <select>
+            <option>500€ – 1000€</option>
             <option>1000€ – 3000€</option>
             <option>3000€+</option>
           </select>
         </div>
 
-        <div class="form-row">
-          <select name="zeit">
-            <option>Wann soll die Website fertig sein? – Sofort</option>
+        <div class="input-box">
+          <span>Zeitrahmen</span>
+          <select>
+            <option>Sofort</option>
             <option>1–2 Wochen</option>
             <option>1 Monat+</option>
           </select>
-
-          <input type="text" name="name" placeholder="Dein Name" required>
         </div>
 
-        <div class="form-row">
-          <input type="email" name="email" placeholder="Email" required>
+        <div class="input-box">
+          <span>Dein Name</span>
+          <input type="text">
         </div>
 
-        <textarea name="beschreibung" placeholder="Beschreibe dein Projekt kurz..."></textarea>
+        <div class="input-box full">
+          <span>Email</span>
+          <input type="email">
+        </div>
 
-        <button type="submit" class="btn primary full">
-          Projekt anfragen
-        </button>
+        <div class="input-box full">
+          <span>Projekt Beschreibung</span>
+          <textarea placeholder="Beschreibe dein Projekt kurz..."></textarea>
+        </div>
 
-      </form>
+      </div>
 
-    </div>
+      <button class="btn primary full">
+        Projekt anfragen
+      </button>
+
+    </form>
 
   </div>
-
 </section>
 
-<!-- TRUST SECTION -->
+<!-- TRUST -->
 <section class="section">
-
   <div class="wrap grid cards">
 
     <div class="card">
@@ -165,31 +174,17 @@ gtag('config', 'AW-17994894398');
       <p>Transparente Pakete ohne versteckte Kosten.</p>
     </div>
 
-    <div class="card">
-      <h3>SEO inklusive</h3>
-      <p>Struktur für Google & lokale Auffindbarkeit.</p>
-    </div>
-
-    <div class="card">
-      <h3>Direkte Anfragen</h3>
-      <p>Kontaktformulare & WhatsApp direkt integriert.</p>
-    </div>
-
   </div>
-
 </section>
 
-<!-- FOOTER -->
 <footer class="footer">
   <div class="wrap footer-wrap">
-
     <span>© 2026 CoreSetup Studio</span>
 
     <div class="footer-right">
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
     </div>
-
   </div>
 </footer>
 
