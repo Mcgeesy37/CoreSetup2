@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Projekt Anfrage | CoreSetup Studio</title>
-<meta name="description" content="Starte dein Website Projekt in wenigen Sekunden. Schnelle Einschätzung & direkte Umsetzung.">
+<meta name="description" content="Starte dein Website Projekt in wenigen Sekunden.">
 
 <!-- Google Tag -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-EC13WS43EB"></script>
@@ -19,7 +19,6 @@ gtag('config', 'AW-17994894398');
 </script>
 
 <link rel="stylesheet" href="assets/css/styles.css">
-
 <script defer src="assets/js/fx.js"></script>
 <script defer src="assets/js/main.js"></script>
 
@@ -27,7 +26,7 @@ gtag('config', 'AW-17994894398');
 
 <body>
 
-<!-- BG -->
+<!-- BACKGROUND -->
 <div class="bg-fx">
   <div class="bg-grid"></div>
   <div class="bg-noise"></div>
@@ -62,19 +61,17 @@ gtag('config', 'AW-17994894398');
 <!-- HERO -->
 <section class="hero section">
   <div class="wrap hero-wrap">
-
     <div>
       <div class="kicker">PROJEKT STARTEN</div>
 
       <h1 class="hero-title">
-        Lass uns dein Projekt starten
+        Starte dein Website Projekt
       </h1>
 
       <p class="hero-sub">
-        In wenigen Schritten zu deiner Website. Schnell, klar und ohne Aufwand.
+        Beantworte ein paar Fragen und erhalte sofort eine Einschätzung.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -82,7 +79,16 @@ gtag('config', 'AW-17994894398');
 <section class="section">
   <div class="wrap">
 
-    <form class="price-card" id="multiStepForm" action="thanks.html">
+    <form 
+      id="multiStepForm"
+      class="price-card"
+      action="https://formspree.io/f/xdawolnz"
+      method="POST"
+    >
+
+      <!-- hidden -->
+      <input type="hidden" name="_redirect" value="https://coresetup.studio/thanks.html">
+      <input type="hidden" name="_subject" value="Neue Projektanfrage CoreSetup">
 
       <div class="section-head">
         <h2>Projekt Details</h2>
@@ -96,7 +102,7 @@ gtag('config', 'AW-17994894398');
 
           <div class="input-box full">
             <span>Welche Website brauchst du?</span>
-            <select id="type">
+            <select id="type" name="website_art">
               <option value="800">Unternehmensseite</option>
               <option value="600">Landingpage</option>
               <option value="1200">Online Shop</option>
@@ -104,8 +110,8 @@ gtag('config', 'AW-17994894398');
           </div>
 
           <div class="input-box full">
-            <span>Ziel deiner Website</span>
-            <input type="text" placeholder="z.B. mehr Kundenanfragen">
+            <span>Ziel</span>
+            <input type="text" name="ziel" placeholder="Mehr Kundenanfragen">
           </div>
 
         </div>
@@ -121,12 +127,12 @@ gtag('config', 'AW-17994894398');
 
           <div class="input-box">
             <span>Branche</span>
-            <input type="text">
+            <input type="text" name="branche">
           </div>
 
           <div class="input-box">
             <span>Budget</span>
-            <select id="budget">
+            <select id="budget" name="budget">
               <option value="0">500–1000€</option>
               <option value="300">1000–3000€</option>
               <option value="800">3000€+</option>
@@ -135,7 +141,7 @@ gtag('config', 'AW-17994894398');
 
           <div class="input-box full">
             <span>Funktionen</span>
-            <input type="text" placeholder="WhatsApp, Buchung, etc.">
+            <input type="text" name="funktionen" placeholder="WhatsApp, Buchung">
           </div>
 
         </div>
@@ -153,7 +159,7 @@ gtag('config', 'AW-17994894398');
         <h3 style="margin-bottom:10px;">Deine Einschätzung</h3>
 
         <div class="price-card highlight" style="margin-bottom:20px;">
-          <strong style="font-size:28px;" id="price">800€ – 1200€</strong>
+          <strong id="price" style="font-size:28px;">800€ – 1200€</strong>
           <p class="note">Basierend auf deinen Angaben</p>
         </div>
 
@@ -161,24 +167,26 @@ gtag('config', 'AW-17994894398');
 
           <div class="input-box">
             <span>Name</span>
-            <input type="text" required>
+            <input type="text" name="name" required>
           </div>
 
           <div class="input-box">
             <span>Email</span>
-            <input type="email" required>
+            <input type="email" name="email" required>
           </div>
 
           <div class="input-box full">
             <span>Projekt Beschreibung</span>
-            <textarea></textarea>
+            <textarea name="message"></textarea>
           </div>
 
         </div>
 
         <div style="display:flex; gap:10px;">
           <button type="button" class="btn ghost back">Zurück</button>
-          <button class="btn primary">Projekt anfragen</button>
+          <button type="submit" class="btn primary">
+            Projekt anfragen
+          </button>
         </div>
 
       </div>
@@ -188,7 +196,7 @@ gtag('config', 'AW-17994894398');
   </div>
 </section>
 
-<!-- JS NUR FÜR FORM -->
+<!-- SCRIPT -->
 <script>
 const steps = document.querySelectorAll(".step");
 let current = 0;
@@ -217,7 +225,6 @@ document.querySelectorAll(".back").forEach(btn=>{
 function updatePrice(){
   const type = document.getElementById("type").value;
   const budget = document.getElementById("budget").value;
-
   const base = parseInt(type) + parseInt(budget);
 
   document.getElementById("price").innerText =
@@ -225,6 +232,37 @@ function updatePrice(){
 }
 
 showStep(0);
+
+/* FORM SUBMIT (JOTZIN / TRACKING SAFE) */
+const form = document.getElementById("multiStepForm");
+
+form.addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  });
+
+  if(response.ok){
+
+    // Google Conversion
+    gtag('event','generate_lead',{
+      'event_category':'form',
+      'event_label':'projekt_anfrage'
+    });
+
+    window.location.href = "https://coresetup.studio/thanks.html";
+
+  } else {
+    alert("Fehler beim Senden.");
+  }
+});
 </script>
 
 <style>
