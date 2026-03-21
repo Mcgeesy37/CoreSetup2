@@ -972,42 +972,30 @@ gap:8px;
 }
 
 .wa-gold {
-  position: fixed;
+  position: fixed !important;
   bottom: 25px;
   right: 25px;
-  padding: 12px 16px;
+
+  padding: 14px 18px;
   background: linear-gradient(135deg, #d6b36a, #9f7b3c);
   color: #000;
+
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
-  z-index: 9999;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+  z-index: 999999; /* EXTREM wichtig */
+
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 13px;
+
+  font-size: 14px;
 }
 
 .wa-gold::before {
   content: "💬";
   font-size: 16px;
-}
-
-.wa-gold {
-  position: fixed !important;
-  bottom: 25px;
-  right: 25px;
-  padding: 14px 18px;
-  background: linear-gradient(135deg, #d6b36a, #9f7b3c);
-  color: #000;
-  font-weight: 600;
-  border-radius: 50px;
-  text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  z-index: 9999;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
