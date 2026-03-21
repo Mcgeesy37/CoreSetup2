@@ -1001,6 +1001,8 @@ gap:8px;
   -webkit-backdrop-filter: blur(6px);
 
   transition: all 0.3s ease;
+
+  animation: pulse 2.5s infinite;
 }
 
 .wa-gold::before {
@@ -1015,13 +1017,8 @@ gap:8px;
     0 0 20px rgba(214,179,106,0.3);
 }
 
-.wa-gold {
-  animation: pulse 2.5s infinite;
-}
-
 @keyframes pulse {
   0% { box-shadow: 0 0 0 0 rgba(214,179,106,0.4); }
   70% { box-shadow: 0 0 0 12px rgba(214,179,106,0); }
   100% { box-shadow: 0 0 0 0 rgba(214,179,106,0); }
 }
-
