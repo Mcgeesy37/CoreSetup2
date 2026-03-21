@@ -972,11 +972,12 @@ gap:8px;
 }
 
 .wa-gold {
-  position: fixed !important;
-  bottom: 25px;
-  right: 25px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 
-  padding: 14px 18px;
+  padding: 14px 20px;
+
   background: linear-gradient(135deg, #d6b36a, #9f7b3c);
   color: #000;
 
@@ -984,18 +985,43 @@ gap:8px;
   border-radius: 50px;
   text-decoration: none;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.4),
+    0 0 0 1px rgba(255,255,255,0.05) inset;
 
-  z-index: 999999; /* EXTREM wichtig */
+  z-index: 999999;
 
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 
   font-size: 14px;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: all 0.3s ease;
 }
 
 .wa-gold::before {
   content: "💬";
   font-size: 16px;
 }
+
+.wa-gold:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 
+    0 15px 40px rgba(0,0,0,0.6),
+    0 0 20px rgba(214,179,106,0.3);
+}
+
+.wa-gold {
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(214,179,106,0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(214,179,106,0); }
+  100% { box-shadow: 0 0 0 0 rgba(214,179,106,0); }
+}
+
