@@ -956,3 +956,17 @@ gap:8px;
     grid-template-columns:1fr;
   }
 }
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: gold;
+  color: black;
+  font-size: 22px;
+  padding: 14px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  z-index: 999;
+  text-decoration: none;
+}
