@@ -58,3 +58,17 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 })();
+const orb = document.querySelector(".orb");
+
+if (orb) {
+  document.addEventListener("mousemove", (e) => {
+    const x = (e.clientX / window.innerWidth - 0.5);
+    const y = (e.clientY / window.innerHeight - 0.5);
+
+    orb.style.transform = `
+      translate(${x * 20}px, ${y * 20}px)
+      rotateY(${x * 10}deg)
+      rotateX(${y * -10}deg)
+    `;
+  });
+}
