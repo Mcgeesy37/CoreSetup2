@@ -1111,3 +1111,13 @@ gap:8px;
     grid-template-columns: 1fr;
   }
 }
+/* === DEPTH UPGRADE (SAFE) === */
+
+.orb-wrap{
+  perspective: 1000px;
+}
+
+.orb{
+  transform-style: preserve-3d;
+  will-change: transform;
+}
