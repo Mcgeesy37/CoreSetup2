@@ -7,9 +7,46 @@
 
 <title>Pentest beauftragen | CoreSetup Studio</title>
 
-<meta name="description" content="Beauftrage einen professionellen Website Security Check. Analyse, Schwachstellen und konkrete Handlungsempfehlungen.">
+<meta name="description" content="Professioneller Pentest für Websites. Finde echte Sicherheitslücken und sichere dein System nachhaltig ab.">
 
 <link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+
+/* ===== EXTRA CYBER LAYER ===== */
+.scanlines::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,0.02),
+    rgba(255,255,255,0.02) 1px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events:none;
+}
+
+.glow-border{
+  position:relative;
+}
+
+.glow-border::after{
+  content:"";
+  position:absolute;
+  inset:-1px;
+  border-radius:18px;
+  background: linear-gradient(120deg, transparent, rgba(200,169,106,0.4), transparent);
+  opacity:0;
+  transition:0.4s;
+}
+
+.glow-border:hover::after{
+  opacity:1;
+}
+
+</style>
 
 </head>
 
@@ -38,26 +75,27 @@
   </nav>
 </header>
 
-<main>
+<main class="scanlines">
 
+<!-- HERO -->
 <section class="hero section">
   <div class="wrap hero-wrap">
 
     <div class="hero-copy">
 
-      <div class="kicker">PENETRATION TESTING</div>
+      <div class="kicker">REAL WORLD SECURITY TESTING</div>
 
-      <h1>Website Sicherheitscheck & Pentest</h1>
+      <h1>Deine Website wird angegriffen.<br>Nur du merkst es nicht.</h1>
 
-      <h2>Finde heraus, wo deine Website angreifbar ist.</h2>
+      <h2>Wir zeigen dir, wo deine Schwachstellen liegen.</h2>
 
       <p class="hero-sub">
-        Wir analysieren deine Website technisch und identifizieren reale Schwachstellen.
-        Du erhältst klare Ergebnisse – keine unnötigen Reports.
+        Kein oberflächlicher Check.  
+        Wir testen deine Website wie ein echter Angreifer – und zeigen dir exakt, was kritisch ist.
       </p>
 
       <div class="hero-cta">
-        <a class="btn primary" href="#formular">Pentest anfragen</a>
+        <a class="btn primary" href="#formular">Pentest starten</a>
       </div>
 
     </div>
@@ -71,97 +109,124 @@
   </div>
 </section>
 
-<!-- FORMULAR -->
-<section id="formular" class="section">
-
+<!-- TRUST (FINDINGS) -->
+<section class="section">
   <div class="wrap">
 
     <div class="section-head">
-      <h2>Pentest Anfrage</h2>
-      <p>Fülle die Angaben aus – wir melden uns schnellstmöglich mit einer Einschätzung.</p>
+      <h2>Beispiel Findings</h2>
+      <p>Geschwärzte reale Analysen aus echten Websites.</p>
+    </div>
+
+    <div class="grid cards">
+
+      <div class="card glow-border">
+        <h3>⚠️ Offene API Endpunkte</h3>
+        <p>/wp-json/... öffentlich zugänglich → Daten auslesbar</p>
+      </div>
+
+      <div class="card glow-border">
+        <h3>🔓 Fehlende Security Header</h3>
+        <p>Keine CSP, kein X-Frame-Options → Angriffsfläche erhöht</p>
+      </div>
+
+      <div class="card glow-border">
+        <h3>⚡ Performance Leak</h3>
+        <p>Unoptimierte Ressourcen → SEO Verlust + Angriffsfläche</p>
+      </div>
+
+      <div class="card glow-border">
+        <h3>🧩 Plugin Schwachstellen</h3>
+        <p>Veraltete Komponenten → bekannte Exploits möglich</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- POSITIONIERUNG -->
+<section class="section">
+  <div class="wrap">
+
+    <div class="section-head">
+      <h2>Warum wir anders sind</h2>
+    </div>
+
+    <div class="grid cards">
+
+      <div class="card">
+        <h3>🧠 Kein Agentur-Blabla</h3>
+        <p>Nur relevante Risiken – keine unnötigen Reports.</p>
+      </div>
+
+      <div class="card">
+        <h3>⚡ Direkt umsetzbar</h3>
+        <p>Du bekommst klare Maßnahmen, keine Theorie.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Realistische Tests</h3>
+        <p>Wir denken wie Angreifer – nicht wie Designer.</p>
+      </div>
+
+      <div class="card">
+        <h3>📈 System Ansatz</h3>
+        <p>Security + SEO + Performance kombiniert.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FORM -->
+<section id="formular" class="section">
+  <div class="wrap">
+
+    <div class="section-head">
+      <h2>Pentest anfragen</h2>
+      <p>Direkt starten – wir melden uns schnell.</p>
     </div>
 
     <form action="https://formspree.io/f/xdawolnz" method="POST" class="contact-form">
 
       <input type="hidden" name="_redirect" value="https://coresetup.studio/thanks.html">
 
-      <!-- BASIS -->
       <input type="text" name="name" placeholder="Name / Unternehmen" required>
       <input type="email" name="email" placeholder="Email" required>
 
-      <!-- WEBSITE -->
-      <input type="text" name="website" placeholder="Website URL (z.B. example.de)" required>
-      
-      <!-- ART -->
-      <select name="test_typ" required>
-        <option value="">Art des Tests wählen</option>
-        <option>Website Security Check</option>
-        <option>WordPress Analyse</option>
-        <option>API / Backend Analyse</option>
-        <option>Kompletter Pentest</option>
+      <input type="text" name="website" placeholder="Website URL" required>
+
+      <select name="scope" required>
+        <option value="">Was soll getestet werden?</option>
+        <option>Komplette Website</option>
+        <option>WordPress</option>
+        <option>Login / Auth System</option>
+        <option>API / Backend</option>
       </select>
 
-      <!-- ZIEL -->
-      <select name="ziel">
-        <option value="">Ziel des Tests</option>
-        <option>Sicherheitslücken finden</option>
-        <option>Performance + Sicherheit</option>
-        <option>Vor Relaunch prüfen</option>
+      <select name="umfang">
+        <option value="">Projektumfang</option>
+        <option>Kleiner Check</option>
+        <option>Standard Pentest</option>
+        <option>Deep Analyse</option>
       </select>
 
-      <!-- TEXT -->
-      <textarea name="details" placeholder="Weitere Infos (optional)" rows="4"></textarea>
+      <textarea name="details" placeholder="Optional: Infos zur Website"></textarea>
 
-      <!-- ERLAUBNIS -->
       <div class="input-box full">
         <label>
-          <input type="checkbox" name="zustimmung" required>
-          Ich bestätige, dass ich Eigentümer der Website bin oder berechtigt bin, einen Pentest durchführen zu lassen.
+          <input type="checkbox" required>
+          Ich bestätige, dass ich berechtigt bin, diese Website testen zu lassen.
         </label>
       </div>
 
-      <!-- SUBMIT -->
       <button type="submit" class="btn primary full">
-        Pentest jetzt anfragen
+        Pentest anfragen
       </button>
 
     </form>
-
-  </div>
-
-</section>
-
-<!-- TRUST -->
-<section class="section">
-  <div class="wrap">
-
-    <div class="section-head">
-      <h2>Warum CoreSetup</h2>
-    </div>
-
-    <div class="grid cards">
-
-      <div class="card">
-        <h3>🧠 Technischer Fokus</h3>
-        <p>Keine Standard-Reports – nur relevante Schwachstellen.</p>
-      </div>
-
-      <div class="card">
-        <h3>⚡ Schnell umsetzbar</h3>
-        <p>Direkte Maßnahmen statt Theorie.</p>
-      </div>
-
-      <div class="card">
-        <h3>🔒 Praxisnah</h3>
-        <p>Realistische Angriffsanalyse.</p>
-      </div>
-
-      <div class="card">
-        <h3>📈 Kombination</h3>
-        <p>Security + SEO + Performance als System.</p>
-      </div>
-
-    </div>
 
   </div>
 </section>
